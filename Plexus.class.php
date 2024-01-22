@@ -48,5 +48,14 @@ Class Plexus{
 		return @$customer_resp['response']['total_results'];
 	}
 
+	/**
+	  *
+	  *
+	  */
+	function getServiceCount($status='progress,live,on-hold'){
+		$customer_resp = $this->__call('/services?status='.$status);
+		return @$customer_resp['response']['total_results'];
+	}
+
 }
 
